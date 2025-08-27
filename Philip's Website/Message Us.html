@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Us — Philip's Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0f19; --panel:#12172a; --muted:#9aa3b2; --text:#e6e9ef;
+      --primary:#7c5cff; --primary-2:#5a3df2;
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Inter,system-ui,sans-serif;
+      background:linear-gradient(180deg,#0b0f19,#0b1120);
+      color:var(--text);
+    }
+    .card {
+      background:linear-gradient(180deg,#12172a,#0f1426);
+      border:1px solid #1e2642;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:30px;
+      width:360px;
+    }
+    h1 {
+      text-align:center;
+      margin-bottom:20px;
+      font-size:1.6rem;
+    }
+    label {
+      display:block;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+    input, textarea {
+      width:100%;
+      padding:10px;
+      margin-bottom:16px;
+      border-radius:8px;
+      border:1px solid #1e2642;
+      background:#0f1426;
+      color:var(--text);
+      font-family:inherit;
+    }
+    input::placeholder, textarea::placeholder {color:#9aa3b2}
+    textarea {resize:none;}
+    .btn {
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:white;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .btn:hover {filter:brightness(1.05);}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Message Us</h1>
+    <form action="mailto:philipblox23@example.com" method="post" enctype="text/plain">
+      <!-- Name Field -->
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" name="Name" placeholder="Enter your name" required>
+
+      <!-- Email Field -->
+      <label for="Email">Your Email:</label>
+      <input type="email" id="Email" name="Email" placeholder="Enter your email" required>
+
+      <!-- Message Field -->
+      <label for="Message">Message:</label>
+      <textarea id="Message" name="Message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Philip's Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0f19; --panel:#12172a; --muted:#9aa3b2; --text:#e6e9ef;
+      --primary:#7c5cff; --primary-2:#5a3df2;
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Inter,system-ui,sans-serif;
+      background:linear-gradient(180deg,#0b0f19,#0b1120);
+      color:var(--text);
+    }
+    .card {
+      background:linear-gradient(180deg,#12172a,#0f1426);
+      border:1px solid #1e2642;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:30px;
+      width:320px;
+    }
+    h1 {
+      text-align:center;
+      margin-bottom:10px;
+      font-size:1.6rem;
+    }
+    h2 {
+      margin-top:0;
+      margin-bottom:15px;
+      font-size:1.2rem;
+      color:var(--muted);
+    }
+    label {
+      display:block;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+    input {
+      width:100%;
+      padding:10px;
+      margin-bottom:16px;
+      border-radius:8px;
+      border:1px solid #1e2642;
+      background:#0f1426;
+      color:var(--text);
+    }
+    input::placeholder {color:#9aa3b2}
+    .btn {
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:white;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .btn:hover {filter:brightness(1.05);}
+    .signup {
+      text-align:center;
+      margin-top:10px;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .signup a {
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Philip's Website</h1>
+    <h2>Student Login</h2>
+    <p>Please enter your login details below:</p>
+    <form>
+      <!-- Username Field -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your Username">
+      
+      <!-- Password Field -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your Password">
+      
+      <!-- Submit Button -->
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <div class="signup">
+      <p>Don't have an account? 
+        <a href="file:///C:/Users/personal/OneDrive/Desktop/Philip's%20Website/sign%20in.html">Sign up here</a>
+      </p>
+    </div>
+
+    <!-- Google Sign-In -->
+    <div style="margin-top:20px; text-align:center;">
+      <div id="g_id_onload"
+           data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
+           data-login_uri="https://your-backend.com/login"
+           data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+           data-type="standard"
+           data-size="large"
+           data-theme="outline"
+           data-text="sign_in_with"
+           data-shape="rectangular"
+           data-logo_alignment="left">
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Sign-In Script -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</body>
+</html>

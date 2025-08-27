@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philip's Website — My Coding Journey</title>
+  <meta name="description" content="Philip's personal website — learning HTML, coding, and building projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f19; --panel:#12172a; --muted:#9aa3b2; --text:#e6e9ef;
+      --primary:#7c5cff; --primary-2:#5a3df2; --accent:#2dd4bf;
+      --ring: 0 0 0 .2rem color-mix(in srgb, var(--primary) 30%, transparent);
+      --radius:16px; --shadow: 0 10px 30px rgba(0,0,0,.25); --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#0b0f19,#0b1120);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,25,.7);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #1b2237;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.brand .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+    .brand{font-weight:700;font-size:1.2rem}
+    .nav a{padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:#141a2e}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;border:none;padding:10px 16px;border-radius:10px;font-weight:600}
+    .btn:hover{filter:brightness(1.05)}
+    section{padding:64px 0}
+    .section-title{font-size:1.9rem;margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .card{background:linear-gradient(180deg,#12172a,#0f1426);border:1px solid #1e2642;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:20px}
+    ul,ol{padding-left:20px}
+    footer{padding:28px 0;border-top:1px solid #1b2237;color:#a7b0c0;text-align:center}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <!-- Logo + brand grouped -->
+    <div class="brand">
+      <img src="c:\Users\personal\OneDrive\Pictures\Screenshots\Screenshot 2025-08-25 170338.png" 
+           alt="Philip Logo" class="logo">
+      <span>YourBiz</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="links">
+      <a href="file:///C:/Users/personal/OneDrive/Desktop/Philip's%20Website/login%20in.html">Home</a>
+      <a href="file:///C:/Users/personal/OneDrive/Desktop/Philip's%20Website/Welcome%20to%20my%20page.html">About</a>
+      <a href="#event">Event</a>
+      <a href="#projects">Projects</a>
+      <a href="file:///C:/Users/personal/OneDrive/Desktop/Philip's%20Website/Message%20Us.html">Contact</a>
+      <a href="#help">Help</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section id="home">
+      <h1>Welcome to Philip's Website</h1>
+      <p class="muted">I am a young coder learning to build websites using HTML. This is my personal website. I love coding when it comes to computers.</p>
+    </section>
+
+    <!-- How I made this page -->
+    <section id="about">
+      <h2 class="section-title">How I Made This Web Page</h2>
+      <div class="card">
+        <ol>
+          <li>Open <mark>Visual Studio Code</mark> (<u>VS Code</u>)</li>
+          <li>Type <code>&lt;!DOCTYPE html&gt;</code></li>
+          <li>Next type <code>&lt;html&gt;</code></li>
+          <li>Then type <code>&lt;head&gt;</code></li>
+          <li>Add a <code>&lt;title&gt;</code> with your name, then close it</li>
+          <li>Close the <code>&lt;/head&gt;</code> tag</li>
+          <li>Next type <code>&lt;body&gt;</code></li>
+          <li>Then start writing your content</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Meaning of codes -->
+    <section id="help">
+      <h2 class="section-title">Meaning of Common HTML Tags</h2>
+      <div class="card">
+        <ul>
+          <li><b>H</b> — Heading</li>
+          <li><b>U</b> — Underline</li>
+          <li><b>B</b> — Bold</li>
+          <li><b>P</b> — Paragraph</li>
+          <li><b>Br</b> — Break</li>
+          <li><b>Li</b> — List Item</li>
+          <li><b>Ol</b> — Ordered List (numbered)</li>
+          <li><b>Ul</b> — Unordered List (bullets)</li>
+          <li><b>Mark</b> — Highlight</li>
+          <li><b>Strong</b> — Bold (semantic)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects placeholder -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="muted">Coming soon — I will share my coding projects here.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="muted">You can reach me via email: <a href="mailto:philipblox23@gmail.com">philipblox23@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="y"></span> Philip's Website</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
